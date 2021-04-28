@@ -14,7 +14,7 @@ const ExerciseForm = ({ onChange , onSubmit, form }) =>(
                 value={form.titulo} ///para que noduplique su valor en e estado y en el input     
             />
         </div>
-        <div className="form-group">
+        <div className="form-group"> 
             <input 
                 type="text" 
                 className="form-control" 

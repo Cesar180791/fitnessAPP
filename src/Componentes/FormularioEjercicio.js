@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ExerciseForm = ({ onChange , onSubmit, form }) =>(
-    <div className="container">
+    <div className="container"> 
     <form
     onSubmit={onSubmit}
     >

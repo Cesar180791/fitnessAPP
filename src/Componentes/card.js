@@ -5,12 +5,41 @@ import '../css/Card.css'
 
 /// componentes de clase ventajas se puede manipular estado y trabajr con el ciclo de vida del componente
 
+const Card = ({ title ,img, description, leftColor, rightColor }) =>(
+    <div className="card mx-auto Fitness-Card"
+    ///Agregamos estilos en linea al div padre 
+    style = {{
+       backgroundImage: `url(${Circulo}), linear-gradient(to right, ${leftColor}, ${rightColor})` 
+    }}
+    >
+        <div className="card-body">
+            <div className="row center">
+                <div className="col-6">
+                    <img alt="exercise" src={img} className="float-right"/>
+                </div>
+                <div className="col-6 Fitness-Card-Info">
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+)
+
+export default Card
+
+
+
+
+
+
+/*
 class Card extends React.Component{
 
 
     render(){
 
-        const { titulo ,img, description, leftColor, rightColor } = this.props
+        const { title ,img, description, leftColor, rightColor } = this.props
         
         return (
             <div className="card mx-auto Fitness-Card"
@@ -25,7 +54,7 @@ class Card extends React.Component{
                             <img alt="exercise" src={img} className="float-right"/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
-                            <h1>{titulo}</h1>
+                            <h1>{title}</h1>
                             <p>{description}</p>
                         </div>
                     </div>
@@ -35,3 +64,4 @@ class Card extends React.Component{
                     }
                 }
 export default Card
+*/
